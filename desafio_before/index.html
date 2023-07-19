@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="icon" type="imagem/png" href="/img/poke.png" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>Lista de Pokémons</title>
+</head>
+
+<body>
+
+  <!-- barra de busca-->
+  <nav class="navbar navbar-dark bg-dark p-1">
+    <a class="navbar-brand ">
+      <img src="/img/poke.png" id="logo">
+    </a>
+
+    <!-- tipos de pokemons-->
+    <select id="tipos" class="form-select ms-10 w-25 " aria-label=".form-select-sm example">
+      <option value="0" disabled selected> Selecione o tipo ou poder do pokemon</option>
+    </select>
+
+    <!-- busca dos pokemons -->
+    <form class="d-flex">
+      <input class="form-control" id="search_input" type="search" placeholder="Search" aria-label="Search">
+      <button id="botaoBuscar" class="btn btn-outline-success ms-1 " type="submit">Search</button>
+    </form>
+  </nav>
+
+  <!-- Listagem dos pokemons -->
+  <div class="container">
+    <div id="listapokemons" class="row justify-content-center">
+    </div>
+  </div>
+
+  <!-- paginacao -->
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a id="anterior" class="page-link" href="">Anterior</a></li>
+      <li  class=" page-item"> <a id="proximo" class="page-link" href="">Proximo</a></li>
+    </ul>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Informações Pokemons</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
